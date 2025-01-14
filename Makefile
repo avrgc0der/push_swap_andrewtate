@@ -1,6 +1,7 @@
 NAME = push_swap
 
-SRCS = push_swap.c 
+SRCS = push_swap.c parsing/errors.c utils/ft_atoi.c utils/ft_joinstr.c \
+	utils/ft_split.c utils/ft_strlcpy.c utils/ft_strlen.c utils2/is_funct.c
 
 OBJS = ${SRCS:.c=.o}
 

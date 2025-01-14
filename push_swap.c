@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enoshahi <enoshahi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: enoshahi < enoshahi@student.42abudhabi.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:11:36 by enoshahi          #+#    #+#             */
-/*   Updated: 2025/01/13 14:17:49 by enoshahi         ###   ########.fr       */
+/*   Updated: 2025/01/14 21:16:35 by enoshahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int main(int ac, char **av)
 {
 	int i;
-	size_t spaces;
+	// size_t spaces;
 	char *tmp;
 	char **strs;
 

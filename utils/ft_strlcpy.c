@@ -1,36 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   errors.c                                           :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: enoshahi < enoshahi@student.42abudhabi.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/14 19:53:36 by enoshahi          #+#    #+#             */
-/*   Updated: 2025/01/14 21:28:14 by enoshahi         ###   ########.fr       */
+/*   Created: 2025/01/14 21:22:18 by enoshahi          #+#    #+#             */
+/*   Updated: 2025/01/14 21:22:20 by enoshahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int args_num_check(int ac, char **av)
+size_t	ft_strlcpy(char *dst, const char *src, size_t len)
 {
-	int i;
-	int j;
+	size_t	i;
 
 	i = 0;
-	while (i < ac - 1)
+	if (len == 0)
+		return (ft_strlen(src));
+	while (src[i] != '\0' && i < len - 1)
 	{
-		j = 0;
-		while (av[j][i] != '\0')
-		{
-			if (is_space(av[i][j]) == 0)
-			{
-				if(!(j == 0 && av[i][j] == '-'))
-					return (-1);
-			}
-			j++;
-		}
+		dst[i] = src[i];
 		i++;
 	}
-	return(1);
+	dst[i] = '\0';
+	return (ft_strlen(src));
 }

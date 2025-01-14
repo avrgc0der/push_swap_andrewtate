@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enoshahi <enoshahi@student.42.fr>          +#+  +:+       +#+        */
+/*   By: enoshahi < enoshahi@student.42abudhabi.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:11:38 by enoshahi          #+#    #+#             */
-/*   Updated: 2025/01/14 18:31:04 by enoshahi         ###   ########.fr       */
+/*   Updated: 2025/01/14 21:28:27 by enoshahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,9 +32,12 @@ typedef struct s_split
 	char **strs;
 }	t_split;
 
+int		args_num_check(int ac, char **av);
 char	*ft_joinstr(char *s1, char *s2);
 char	**ft_split(char const *s, char c);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t len);
+int		is_digit(int c);
+int		is_space(int c);
 
 # endif
