@@ -6,31 +6,50 @@
 /*   By: enoshahi < enoshahi@student.42abudhabi.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 19:53:36 by enoshahi          #+#    #+#             */
-/*   Updated: 2025/01/14 21:28:14 by enoshahi         ###   ########.fr       */
+/*   Updated: 2025/01/16 13:41:39 by enoshahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int args_num_check(int ac, char **av)
+int args_numcheck(int ac, char **av)
 {
 	int i;
 	int j;
+	int nb;
 
-	i = 0;
-	while (i < ac - 1)
-	{
-		j = 0;
-		while (av[j][i] != '\0')
-		{
-			if (is_space(av[i][j]) == 0)
-			{
-				if(!(j == 0 && av[i][j] == '-'))
-					return (-1);
-			}
-			j++;
-		}
-		i++;
-	}
-	return(1);
+	
 }
+
+int args_num_check(int ac, char **av)
+{
+    int i;
+	int j;
+
+	i = 1;
+    while (i < ac) 
+	{
+        j = 0;
+        while (av[i][j] != '\0' && is_space(av[i][j]))
+            j++;
+        if (av[i][j] == '-')
+            j++;
+        int has_digits = 0;
+        while (av[i][j] != '\0')
+		{
+            if (!is_digit(av[i][j]))
+                return (-1);
+            has_digits = 1;
+            j++;
+        }
+        if (!has_digits)
+            return (-1);
+
+        i++;
+    }
+    return (1);
+}
+
+// ! there are two indexes for av[i][j]
+// * check if there are arguments, and if the spaces function is applicable
+// * 
