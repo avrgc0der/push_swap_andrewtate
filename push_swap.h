@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enoshahi < enoshahi@student.42abudhabi.    +#+  +:+       +#+        */
+/*   By: enoshahi <enoshahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/13 14:11:38 by enoshahi          #+#    #+#             */
-/*   Updated: 2025/01/15 12:28:52 by enoshahi         ###   ########.fr       */
+/*   Updated: 2025/01/16 17:04:07 by enoshahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,5 +51,6 @@ size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t len);
 int		is_digit(int c);
 int		is_space(int c);
+int		args_numcheck(int ac, char **av);
 
 # endif
