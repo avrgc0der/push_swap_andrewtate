@@ -3,22 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: enoshahi < enoshahi@student.42abudhabi.    +#+  +:+       +#+        */
+/*   By: enoshahi <enoshahi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/14 21:21:42 by enoshahi          #+#    #+#             */
-/*   Updated: 2025/01/14 21:32:36 by enoshahi         ###   ########.fr       */
+/*   Updated: 2025/01/19 17:50:18 by enoshahi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
 
-int	check(int nb, int mult)
+static int	check(unsigned int nb, int mult)
 {
-    if ((mult == 1 && nb == 2147483647) || (mult == -1 && nb == -2147483648))
-        return (mult == 1 ? -1 : 0);
-
-    nb *= mult;
-    return (nb);
+	if (nb > 2147483647 && mult == 1)
+		return (-1);
+	else if (nb > 2147483648 && mult == -1)
+		return (0);
+	nb *= mult;
+	return (nb);
 }
 
 int	ft_atoi(const char *str)
